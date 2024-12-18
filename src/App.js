@@ -29,7 +29,9 @@ function App() {
     <div className="App">
       <h1>User Details Modal</h1>
 
-      <button onClick={clickButton}>Open Form</button>
+      <button className="modal" onClick={clickButton}>
+        Open Form
+      </button>
 
       {isOpen && (
         <div className="modal" onClick={closeModal}>
