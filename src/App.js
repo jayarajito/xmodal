@@ -27,13 +27,12 @@ function App() {
   };
   return (
     <div className="App">
-      <div className="modal">
-        <h1>User Details Modal</h1>
-        <button className="modal" onClick={clickButton}>
-          Open Form
-        </button>
-        {isOpen && (
-          <div className="modal-content" onClick={closeModal}>
+      <h1>User Details Modal</h1>
+      <button onClick={clickButton}>Open Form</button>
+
+      {isOpen && (
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content">
             <form onSubmit={submitForm}>
               <h2>Fill Details</h2>
               <div className="input-group">
@@ -57,8 +56,8 @@ function App() {
               </button>
             </form>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
