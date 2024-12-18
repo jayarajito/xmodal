@@ -26,14 +26,14 @@ function App() {
     console.log(e.target.dob.value);
   };
   return (
-    <div className="modal">
+    <div className="App">
       <h1>User Details Modal</h1>
 
       <button onClick={clickButton}>Open Form</button>
 
       {isOpen && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal-content">
+          <div className="modal modal-content">
             <form onSubmit={submitForm}>
               <h2>Fill Details</h2>
               <div className="input-group">
