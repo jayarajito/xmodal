@@ -26,13 +26,9 @@ function App() {
     console.log(e.target.dob.value);
   };
   return (
-    <div className="App">
+    <div className="App modal">
       <h1>User Details Modal</h1>
-
-      <button className="modal" onClick={clickButton}>
-        Open Form
-      </button>
-
+      <button onClick={clickButton}>Open Form</button>
       {isOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
