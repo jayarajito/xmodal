@@ -28,8 +28,9 @@ function App() {
   return (
     <div className="App">
       <h1>User Details Modal</h1>
-      <button onClick={clickButton}>Open Form</button>
-
+      <div className="modal">
+        <button onClick={clickButton}>Open Form</button>
+      </div>
       {isOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
