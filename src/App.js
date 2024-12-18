@@ -33,7 +33,7 @@ function App() {
 
       {isOpen && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal modal-content">
+          <div className="modal-content">
             <form onSubmit={submitForm}>
               <h2>Fill Details</h2>
               <div className="input-group">
