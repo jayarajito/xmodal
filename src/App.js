@@ -8,7 +8,7 @@ function App() {
 
   const closeModal = (e) => {
     console.log(e.target.className);
-    if (e.target.className === "modal-content") setIsOpen(false);
+    if (e.target.className === "modal") setIsOpen(false);
   };
 
   const submitForm = (e) => {
