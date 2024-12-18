@@ -26,35 +26,39 @@ function App() {
     console.log(e.target.dob.value);
   };
   return (
-    <div className="modal">
-      <h1>User Details Modal</h1>
-      <button onClick={clickButton}>Open Form</button>
-      {isOpen && (
-        <div className="modal-content" onClick={closeModal}>
-          <form onSubmit={submitForm}>
-            <h2>Fill Details</h2>
-            <div className="input-group">
-              <label htmlFor="username">Username: </label>
-              <input type="text" name="username" id="username" />
-            </div>
-            <div className="input-group">
-              <label htmlFor="email">Email Address:</label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div className="input-group">
-              <label htmlFor="phoneNo">Phone Number:</label>
-              <input type="number" name="phoneNo" id="phone" required />
-            </div>
-            <div className="input-group">
-              <label htmlFor="dob">Date of Birth:</label>
-              <input type="date" name="dob" id="dob" />
-            </div>
-            <button type="submit" className="submit-button">
-              Submit
-            </button>
-          </form>
-        </div>
-      )}
+    <div className="App">
+      <div className="modal">
+        <h1>User Details Modal</h1>
+        <button className="modal" onClick={clickButton}>
+          Open Form
+        </button>
+        {isOpen && (
+          <div className="modal-content" onClick={closeModal}>
+            <form onSubmit={submitForm}>
+              <h2>Fill Details</h2>
+              <div className="input-group">
+                <label htmlFor="username">Username: </label>
+                <input type="text" name="username" id="username" />
+              </div>
+              <div className="input-group">
+                <label htmlFor="email">Email Address:</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div className="input-group">
+                <label htmlFor="phoneNo">Phone Number:</label>
+                <input type="number" name="phoneNo" id="phone" required />
+              </div>
+              <div className="input-group">
+                <label htmlFor="dob">Date of Birth:</label>
+                <input type="date" name="dob" id="dob" />
+              </div>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
