@@ -1,5 +1,4 @@
-
-import './App.css';
+import "./App.css";
 import React, { useState } from "react";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +26,11 @@ function App() {
     console.log(e.target.dob.value);
   };
   return (
-    <div className="App">
-
-<div className="modal">
-<h1>User Details Modal</h1>
-<button onClick={clickButton}>Open Form</button>
-{isOpen && (
+    <div className="App" id="root">
+      <div className="modal">
+        <h1>User Details Modal</h1>
+        <button onClick={clickButton}>Open Form</button>
+        {isOpen && (
           <div className="modal-content" onClick={closeModal}>
             <form onSubmit={submitForm}>
               <h2>Fill Details</h2>
@@ -58,8 +56,7 @@ function App() {
             </form>
           </div>
         )}
-
-</div>
+      </div>
     </div>
   );
 }
