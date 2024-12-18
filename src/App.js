@@ -8,7 +8,7 @@ function App() {
 
   const closeModal = (e) => {
     console.log(e.target.className);
-    if (e.target.className === "modal") setIsOpen(false);
+    if (e.target.className === "modal-content") setIsOpen(false);
   };
 
   const submitForm = (e) => {
@@ -30,8 +30,8 @@ function App() {
       <h1>User Details Modal</h1>
       <button onClick={clickButton}>Open Form</button>
       {isOpen && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content">
+        <div className="modal">
+          <div className="modal-content" onClick={closeModal}>
             <form onSubmit={submitForm}>
               <h2>Fill Details</h2>
               <div className="input-group">
